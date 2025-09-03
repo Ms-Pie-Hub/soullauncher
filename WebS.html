@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widt-=devicewidth, initial-scale="1.0">
+    <title>Soul Launcher</title>
+   <link rel="stylesheet" href="WebSD.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="ust-bar" style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+            <nav class="soft" style="flex: 0 0 auto;">
+                <a href="#home" onclick="showSection('hero'); return false;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-5H9v5H4a1 1 0 0 1-1-1V10.5z" stroke="currentColor" stroke-width="2"/></svg>
+                    Home
+                </a>
+                <a href="#features" onclick="showSection('features'); return false;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M12 2l2.09 6.26L20 9.27l-5 4.87L16.18 21 12 17.77 7.82 21 9 14.14l-5-4.87 5.91-.91z" stroke="currentColor" stroke-width="2"/></svg>
+                    Features
+                </a>
+                <a href="#download" onclick="showSection('download'); return false;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M12 3v12m0 0l-4-4m4 4l4-4m-8 8h8" stroke="currentColor" stroke-width="2"/></svg>
+                    Download
+                </a>
+                <a href="#about" onclick="showSection('about'); return false;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 16v-4m0-4h.01" stroke="currentColor" stroke-width="2"/></svg>
+                    About
+                </a>
+            </nav>
+            <div class="header-center soft" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0; padding: 0; background: none; box-shadow: none;">
+                <div class="logo-title-inline" style="display: flex; align-items: center; gap: 0px;">
+                    <img src="Copilot_20250809_125601.png" alt="Logo" class="site-logo soft" style="height: 38px; width: 38px; border-radius: 12px;">
+                    <h1 class="site-title soft" style="cursor:pointer; font-size: 1.6rem; padding: 0 8px; border-radius: 10px;" onclick="showSection('hero');">Soul Client</h1>
+                </div>
+            </div>
+            <div class="auth-buttons right" style="flex: 0 0 auto;">
+                <button class="login-btn soft" onclick="openModal('loginModal')">Login</button>
+                <button class="login-btn soft" onclick="openModal('registerModal')">Register</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="page-section">
+            <h2>Welcome to Soul Client!</h2>
+            <p>Launch Minecraft easily, manage versions, and enjoy a smooth experience.</p>
+            <a href="#download" class="download-btn" onclick="showSection('download'); return false;"><span>Download Now</span></a>
+        </section>
+        <section id="features" class="page-section" style="display:none;">
+            <h2>Features</h2>
+            <ul>
+                <li>Easy version management</li>
+                <li>Fast and secure downloads</li>
+                <li>Custom skins and mods support</li>
+                <li>User-friendly interface</li>
+            </ul>
+        </section>
+        <section id="download" class="page-section" style="display:none;">
+            <h2>Download</h2>
+            <p>Get the latest version of the launcher below:</p>
+            <a href="https://drive.google.com/uc?export=download&id=1K5l6241K1jEGS0V__LTNT-1qeRQ7KIto" class="download-btn" data-link="windows"><span>Download for Windows</span></a>
+            <br><br>
+            <a href="#" class="download-btn" data-link="linux"><span>Download for Linux</span></a>
+            <br><br>
+            <a href="#" class="download-btn" data-link="mac"><span>Download for Mac</span></a>
+        </section>
+        <section id="about" class="page-section" style="display:none;">
+            <h2>About</h2>
+            <p>This launcher is made by Minecraft fans, for Minecraft fans. Enjoy a better way to play!</p>
+            <div class="social-btns">
+                <a href="https://discord.com/" class="social-btn discord" target="_blank" title="Discord"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.369A19.791 19.791 0 0 0 16.885 3.2a.117.117 0 0 0-.125.06c-.543.96-1.146 2.22-1.573 3.2a18.524 18.524 0 0 0-5.372 0c-.427-.99-1.03-2.24-1.573-3.2a.117.117 0 0 0-.125-.06A19.736 19.736 0 0 0 3.684 4.369a.105.105 0 0 0-.047.043C1.605 7.725.322 11.01.076 14.346a.121.121 0 0 0 .045.1c2.052 1.507 4.042 2.422 5.992 3.029a.116.116 0 0 0 .127-.043c.461-.63.873-1.295 1.226-1.994a.112.112 0 0 0-.065-.158c-.652-.247-1.27-.549-1.872-.892a.112.112 0 0 1-.011-.188c.126-.094.252-.192.372-.291a.112.112 0 0 1 .114-.01c3.927 1.793 8.18 1.793 12.062 0a.112.112 0 0 1 .115.009c.12.099.246.197.372.291a.112.112 0 0 1-.01.188 12.298 12.298 0 0 1-1.873.893.112.112 0 0 0-.064.157c.36.699.772 1.364 1.227 1.994a.115.115 0 0 0 .127.043c1.95-.607 3.94-1.522 5.992-3.029a.12.12 0 0 0 .045-.1c-.3-3.336-1.583-6.621-3.561-9.934a.104.104 0 0 0-.047-.043zM8.02 15.331c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.175 1.095 2.156 2.418 0 1.334-.955 2.419-2.156 2.419zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.175 1.095 2.156 2.418 0 1.334-.946 2.419-2.156 2.419z"/></svg></a>
+                <a href="https://instagram.com/" class="social-btn instagram" target="_blank" title="Instagram"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.057-1.282.315-2.394 1.295-3.374.98-.98 2.092-1.238 3.374-1.295C8.414 2.105 8.794 2.163 12 2.163zm0-2.163C8.741 0 8.332.012 7.052.07 5.771.127 4.659.385 3.678 1.366c-.98.98-1.238 2.092-1.295 3.374C2.012 5.741 2 6.15 2 12c0 5.85.012 6.259.07 7.54.057 1.282.315 2.394 1.295 3.374.98.98 2.092 1.238 3.374 1.295C8.259 23.988 8.668 24 12 24s3.741-.012 4.948-.07c1.282-.057 2.394-.315 3.374-1.295.98-.98 1.238-2.092 1.295-3.374.058-1.281.07-1.69.07-7.54 0-5.85-.012-6.259-.07-7.54-.057-1.282-.315-2.394-1.295-3.374-.98-.98-2.092-1.238-3.374-1.295C15.259.012 14.85 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+                <a href="https://reddit.com/" class="social-btn reddit" target="_blank" title="Reddit"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12zm-6.406-2.845c.406 0 .734.329.734.734 0 .406-.329.734-.734.734-.406 0-.734-.329-.734-.734 0-.406.329-.734.734-.734zm-11.188 0c.406 0 .734.329.734.734 0 .406-.329.734-.734.734-.406 0-.734-.329-.734-.734 0-.406.329-.734.734-.734zm10.453 5.063c.073.073.073.192 0 .265-.073.073-.192.073-.265 0-.73-.73-2.073-1.207-3.594-1.207-1.521 0-2.864.477-3.594 1.207-.073.073-.192.073-.265 0-.073-.073-.073-.192 0-.265.823-.823 2.271-1.353 3.859-1.353s3.036.53 3.859 1.353zm-3.859 2.207c-1.207 0-2.188-.98-2.188-2.188h4.375c0 1.208-.98 2.188-2.188 2.188z"/></svg></a>
+            </div>
+        </section>
+    </main>
+    <div class="alt-bar">
+        <p>&copy; 2025 My Minecraft Launcher. Not affiliated with Mojang or Microsoft.</p>
+    </div>
+    <div id="loginModal" class="modal" style="display:none;">
+        <div class="modal-content" tabindex="-1">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form onsubmit="event.preventDefault(); closeModal('loginModal');">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="download-btn"><span>Login</span></button>
+            </form>
+        </div>
+    </div>
+    <div id="registerModal" class="modal" style="display:none;">
+        <div class="modal-content" tabindex="-1">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Register</h2>
+            <form onsubmit="event.preventDefault(); closeModal('registerModal');">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="download-btn"><span>Register</span></button>
+            </form>
+        </div>
+    </div>
+    <script>
+    let currentSection = null;
+    function showSection(section) {
+        const sections = ['hero', 'features', 'download', 'about'];
+        if (currentSection === section) return;
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (id === section) {
+                el.style.display = 'block';
+                el.classList.add('visible');
+            } else {
+                el.classList.remove('visible');
+                el.style.display = 'none';
+            }
+        });
+        currentSection = section;
+    }
+    function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.classList.add('active');
+            modal.querySelector('.modal-content').focus();
+        }, 10);
+        function outsideClick(e) {
+            if (e.target === modal) closeModal(id);
+        }
+        function escClose(e) {
+            if (e.key === 'Escape') closeModal(id);
+        }
+        modal._outsideClick = outsideClick;
+        modal._escClose = escClose;
+        modal.addEventListener('mousedown', outsideClick);
+        document.addEventListener('keydown', escClose);
+    }
+    function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove('active');
+        setTimeout(() => { modal.style.display = 'none'; }, 150);
+        if (modal._outsideClick) modal.removeEventListener('mousedown', modal._outsideClick);
+        if (modal._escClose) document.removeEventListener('keydown', modal._escClose);
+    }
+    
+    document.querySelectorAll('.download-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple';
+            ripple.style.left = e.offsetX + 'px';
+            ripple.style.top = e.offsetY + 'px';
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+            e.stopPropagation();
+            if (!this.getAttribute('href') || this.getAttribute('href') === '#') {
+                e.preventDefault();
+            }
+        });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.createElement('canvas');
+        canvas.id = 'bg-particles';
+        canvas.style.position = 'fixed';
+        canvas.style.top = 0;
+        canvas.style.left = 0;
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
+        canvas.style.zIndex = 0;
+        canvas.style.pointerEvents = 'none';
+        document.body.prepend(canvas);
+        const ctx = canvas.getContext('2d');
+        let w, h;
+        function resize() {
+            w = window.innerWidth;
+            h = window.innerHeight;
+            canvas.width = w;
+            canvas.height = h;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+        const particles = Array.from({length: 32}, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: 1.5 + Math.random() * 2.5,
+            dx: (Math.random() - 0.5) * 0.3,
+            dy: (Math.random() - 0.5) * 0.3,
+            a: 0.08 + Math.random() * 0.08
+        }));
+        function draw() {
+            ctx.clearRect(0, 0, w, h);
+            for (const p of particles) {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
+                ctx.fillStyle = `rgba(189,189,247,${p.a})`;
+                ctx.shadowColor = '#bdbdf7';
+                ctx.shadowBlur = 8;
+                ctx.fill();
+                p.x += p.dx;
+                p.y += p.dy;
+                if (p.x < 0 || p.x > w) p.dx *= -1;
+                if (p.y < 0 || p.y > h) p.dy *= -1;
+            }
+            ctx.shadowBlur = 0;
+            requestAnimationFrame(draw);
+        }
+        draw();
+    });
+
+    showSection('hero');
+    </script>
+</body>
+</html>
